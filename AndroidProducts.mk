@@ -14,9 +14,9 @@
 # limitations under the License.
 
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/arrow_bitra.mk
+    $(LOCAL_DIR)/octavi_bitra.mk
 
 COMMON_LUNCH_CHOICES := \
-    arrow_bitra-user \
-    arrow_bitra-userdebug \
-    arrow_bitra-eng
+    octavi_bitra-user \
+    octavi_bitra-userdebug \
+    octavi_bitra-eng

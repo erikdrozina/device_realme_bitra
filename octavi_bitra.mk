@@ -18,17 +18,16 @@
 $(call inherit-product, $(SRC_TARGET_DIR)/product/core_64_bit.mk)
 $(call inherit-product, $(SRC_TARGET_DIR)/product/full_base_telephony.mk)
 
-# Inherit some common ArrowOS stuff
-$(call inherit-product, vendor/arrow/config/common.mk)
-ARROW_GAPPS := true
+# Inherit some common OctaviOS stuff
+$(call inherit-product, vendor/octavi/config/common_full_phone.mk)
 TARGET_BOOT_ANIMATION_RES := 1080
-TARGET_INCLUDE_PIXEL_CHARGER := true
+USE_PIXEL_CHARGER := true
 
 # Inherit from device
 $(call inherit-product, $(LOCAL_PATH)/device.mk)
 
 # Device identifier. This must come after all inclusions.
-PRODUCT_NAME := arrow_bitra
+PRODUCT_NAME := octavi_bitra
 PRODUCT_DEVICE := bitra
 PRODUCT_BRAND := realme
 PRODUCT_MODEL := RMX3370
@@ -40,8 +39,12 @@ PRODUCT_SYSTEM_DEVICE := RE879AL1
 PRODUCT_GMS_CLIENTID_BASE := android-oppo
 
 PRODUCT_BUILD_PROP_OVERRIDES += \
-    PRIVATE_BUILD_DESC="RMX3370-user 12 RKQ1.211103.002 R.202207221208 release-keys" \
+    PRIVATE_BUILD_DESC="RMX3370-user 12 RKQ1.211103.002 R.202207052143 release-keys" \
     TARGET_DEVICE=$(PRODUCT_SYSTEM_DEVICE) \
     TARGET_PRODUCT=$(PRODUCT_SYSTEM_NAME)
 
-BUILD_FINGERPRINT := realme/RMX3370/RE879AL1:12/RKQ1.211103.002/R.202207221208:user/release-keys
+BUILD_FINGERPRINT := realme/RMX3370/RE879AL1:12/RKQ1.211103.002/R.202207052143:user/release-keys
+
+# Octavi
+OCTAVI_MAINTAINER := Erikdrozina
+OCTAVI_BUILD_TYPE := Official
