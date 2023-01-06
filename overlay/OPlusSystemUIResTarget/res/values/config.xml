@@ -24,4 +24,8 @@
     <!-- The Enrollment Progress bar for UDFPS sensor in pixels -->
     <integer name="config_udfpsEnrollProgressBar" translatable="false">109</integer>
 
+    <!-- Whether to pulse onFingerDown actions instead
+         of waking the screen while the screen is off or in lpm. -->
+    <bool name="config_pulseOnFingerDown">true</bool>
+
 </resources>
